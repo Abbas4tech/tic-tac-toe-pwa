@@ -1,0 +1,15 @@
+<button class="btn btn-square btn-xl w-full h-full" *ngIf="!value">
+  {{ value }}
+</button>
+<button
+  class="btn-square btn btn-xl h-full w-full btn-info text-5xl font-bold text-secondary-content"
+  *ngIf="value == 'X'"
+>
+  {{ value }}
+</button>
+<button
+  *ngIf="value == 'O'"
+  class="btn-square btn btn-xl h-full w-full btn-warning text-5xl font-bold text-secondary-content"
+>
+  {{ value }}
+</button>

@@ -1,0 +1,21 @@
+<div class="artboard phone-2 p-4">
+  <h1 class="text-3xl my-4 font-bold font-mono">
+    Current Player: {{ player }}
+  </h1>
+
+  <button class="btn font-mono btn-primary mb-8" (click)="newGame()">
+    Start new Game
+  </button>
+
+  <h2 class="mb-4 text-xl font-semibold" *ngIf="winner">
+    Player {{ winner }} won the game!
+  </h2>
+  <div class="grid gap-2 w-full grid-cols-3 grid-rows-3">
+    <app-tile
+      *ngFor="let val of tiles; let i = index"
+      [value]="val"
+      (click)="makeMove(i)"
+    >
+    </app-tile>
+  </div>
+</div>
